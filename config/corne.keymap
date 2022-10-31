@@ -11,8 +11,8 @@
 #define HYPER(key) LS(LC(LA(LG(key))))
 
 #define BASE 0
-#define MED  1
-#define NAV  2
+#define NAV  1
+#define MED  2
 #define LOWER       3
 #define RAISE       4
 
@@ -61,6 +61,21 @@ base_layer {
         &kp LCTRL  &hm LALT A       &hm LCTRL S      &hm LCMD D      &hm LSFT F         &kp G                 &kp H    &hm LSFT J      &hm LCMD K          &hm LCTRL L         &hm LALT SEMI          &kp SQT
         &kp LSHFT  &kp Z            &kp X            &kp C           &kp V              &kp B                 &kp N    &kp M           &kp COMMA           &kp DOT             &kp FSLH               &kp ESC
                                                      &mo_kp MED ESC  &mo_kp NAV SPACE   &kp TAB               &kp RET  &kp BSPC        &kp DEL
+    >;
+};
+
+
+// |    |     |     |     |     |    |     | Redo| Paste | Copy | Cut | Undo |    |
+// |    | ALT | CTRL| CMD | SFT |    |     |  H  |   ◄   |  ▲   |  ▼  |  ►   |    |
+// |    |     |     |     |     |    |     |  N  |   M   |  ,   |  .  |  /   |    |
+//                  |     |LAYER|    |     |  ⏎  |   ⌫   |  ⌦   |
+
+nav_layer {
+    bindings = <
+        &none   &none     &none      &none       &none              &none              &kp Y    &kp U       &kp I       &kp O     &kp P       &kp BSPC
+        &none   &kp LALT  &kp LCTRL  &kp LCMD    &kp LSFT           &none              &kp H    &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT   &kp SQT
+        &none   &none     &none      &none       &none              &none              &kp N    &kp M       &kp COMMA   &kp DOT   &kp FSLH    &kp ESC
+                                     &none       &mo_kp NAV SPACE   &none              &kp RET  &kp BSPC    &kp DEL
     >;
 };
 
