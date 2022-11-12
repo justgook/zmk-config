@@ -37,9 +37,10 @@
 
 
 #define QWERTY_LAYER 0
-#define MEDIA_LAYER 1
-#define NUM_LAYER 2
-#define FUN_LAYER 3
+#define NAV_LAYER 1
+#define MEDIA_LAYER 2
+#define NUM_LAYER 3
+#define FUN_LAYER 4
 
 // thumbs
 #define TH1 &mo_tap LAYER1 ESC
